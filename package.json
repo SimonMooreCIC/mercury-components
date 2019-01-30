@@ -1,0 +1,71 @@
+{
+  "name": "mercury-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@emotion/core": "^10.0.6",
+    "@emotion/styled": "^10.0.6",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
+    "emotion": "^10.0.6",
+    "eslint": "^5.12.1",
+    "jest-emotion": "^10.0.6",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.0.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "jest": "^24.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-styleguidist": "^8.0.6",
+    "webpack": "^4.29.0"
+  },
+  "scripts": {
+    "start": "npx styleguidist server",
+    "build": "npx styleguidist build",
+    "test": "npm run test:unit",
+    "test:unit": "jest --env=jsdom --u",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
+    "test:snapshot": "npm run test:unit -- -u"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src/{components,packages}/**/?(*.)(spec|test).js?(x)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/scripts/setupTests.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/{components,packages}/**/?(*.)(spec|test).js?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "author": "Simon Moore",
+  "license": "ISC"
+}
