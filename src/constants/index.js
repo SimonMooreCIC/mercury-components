@@ -46,10 +46,10 @@ export const MEDIA_QUERIES = {
 };
 
 // TODO: figure out how to optionally include locally installed font, e.g. "GDS Transport Website"
-export const NTA_LIGHT = 'Helvetica, Arial, sans-serif';
-export const NTA_LIGHT_TABULAR = `ntatabularnumbers", ${NTA_LIGHT}`;
-export const FONT_STACK = `${NTA_LIGHT} !default`;
-export const FONT_STACK_TABULAR = `${NTA_LIGHT_TABULAR} !default`;
+export const GOTHAM = 'Helvetica, Arial, sans-serif';
+export const GOTHAM_TABULAR = `ntatabularnumbers", ${GOTHAM}`;
+export const FONT_STACK = `${GOTHAM} !default`;
+export const FONT_STACK_TABULAR = `${GOTHAM_TABULAR} !default`;
 export const FONT_STACK_PRINT = 'sans-serif !default';
 export const FONT_SIZE = {
   SIZE_14: '14px',

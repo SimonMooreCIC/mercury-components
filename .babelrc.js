@@ -7,6 +7,7 @@ const presets = [
 
 const plugins = [
   ['transform-react-remove-prop-types'],
+  ['@babel/plugin-proposal-object-rest-spread'],
   [
     '@babel/plugin-transform-runtime',
     { helpers: false, regenerator: true },

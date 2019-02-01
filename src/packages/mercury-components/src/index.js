@@ -3,3 +3,4 @@
 
 // Components
 export { default as Button } from '../../../components/Button/src';
+export { default as Paragraph } from '../../../components/Paragraph/src';
