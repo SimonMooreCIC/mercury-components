@@ -23,7 +23,7 @@ describe('disabled button', () => {
   let wrapper;
 
   it('renders without crashing', () => {
-    wrapper = mount(<Button disabled />);
+    wrapper = mount(<ButtonDisabled />);
   });
 
   it('should render a button with the disabled attribute', () => {

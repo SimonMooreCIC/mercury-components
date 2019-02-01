@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import { NTA_LIGHT, FONT_SIZE } from '../../constants';
+import { GOTHAM, FONT_SIZE } from '../../../constants';
 
 import {
   PRIMARY,
   TERTIARY,
   WHITE,
   QUARTERY,
-} from '../../constants/colours';
+} from '../../../constants/colours';
 
 const StyledButton = styled.button`
 	background: ${PRIMARY};
@@ -19,7 +19,7 @@ const StyledButton = styled.button`
     display: flex;
     align-items: center;
   	justify-content: center;
-    font-family: ${NTA_LIGHT};
+    font-family: ${GOTHAM};
     font-weight: 400;
     font-size: ${FONT_SIZE.SIZE_14};
 	min-width: 105px;
