@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import { GOTHAM } from '../../../constants';
 
@@ -9,9 +9,6 @@ const StyledParagraph = styled.p`
 	font-family: ${GOTHAM};
 }`;
 
-/**
- * The only true button.
- */
 const Paragraph = props => <StyledParagraph {...props} />;
 
 Paragraph.propTypes = {

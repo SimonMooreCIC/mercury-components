@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import { GOTHAM, FONT_SIZE } from '../../../constants';
 
@@ -58,6 +58,8 @@ const StyledButton = styled.button`
 	}
 `;
 
+StyledButton.displayName = "Button";
+
 /**
  * The only true button.
  */
@@ -74,13 +76,6 @@ Button.propTypes = {
 	disabled: PropTypes.bool,
 	/** Gets called when the user clicks on the button */
 	onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-	onClick: event => {
-		// eslint-disable-next-line no-console
-		console.log('You have clicked me!', event.target);
-	},
 };
 
 export default Button;

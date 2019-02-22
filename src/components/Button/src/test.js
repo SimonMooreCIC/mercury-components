@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import Button from './';
 
@@ -17,13 +17,20 @@ describe('button', () => {
   it('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('Test click event', () => {
+    const mockFunction = jest.fn();
+    const wrapper = shallow(<Button onClick={mockFunction}/>);
+    wrapper.find('Button').simulate('click');
+    expect(mockFunction).toHaveBeenCalled();
+  });
 });
 
 describe('disabled button', () => {
   let wrapper;
 
   it('renders without crashing', () => {
-    wrapper = mount(<ButtonDisabled />);
+    wrapper = mount(<Button disabled={true} />);
   });
 
   it('should render a button with the disabled attribute', () => {
